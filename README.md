@@ -1,2 +1,3 @@
-# typescript-data-structures
-Typescript Data Structures
+# typescript-data-structures katas
+
+A hobby repository where I try to implement Data Structures using Typescript. 
