@@ -1,19 +1,23 @@
 export default class HashTable {
-  private table = [];
-  size = 0;
+  private _table = [];
+  private _size = 0;
 
   constructor(size = 32) {
-    this.size = size;
+    this._size = size;
+  }
+
+  get size(): number {
+    return this._size;
   }
 
   private hash = key =>
-    [...key].reduce((hash, char) => hash + char.charCodeAt(0), 0) % this.size;
+    [...key].reduce((hash, char) => hash + char.charCodeAt(0), 0) % this._size;
 
-  set = (key, value) => (this.table[this.hash(key)] = value);
+  set = (key, value) => (this._table[this.hash(key)] = value);
 
-  get = key => this.table[this.hash(key)] ?? null;
+  get = key => this._table[this.hash(key)] ?? null;
 
-  delete = key => (this.table[this.hash(key)] = undefined);
+  delete = key => (this._table[this.hash(key)] = undefined);
 
-  has = key => this.table[this.hash(key)] !== undefined;
+  has = key => this._table[this.hash(key)] !== undefined;
 }
