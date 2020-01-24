@@ -35,7 +35,7 @@ export default class Tree {
      Depth-first-search recursion is not working  
      if the node doesn't have children, 
      the method will not recurse on 
-     it's sibilings.
+     its sibilings.
      */
     if (root.children.length > 0) {
       for (const child of root.children) {
