@@ -5,5 +5,5 @@ export default abstract class Collection<T> {
     return this.collection.length;
   }
 
-  isEmpty = (): boolean => this.collection.length < 1;
+  isEmpty = (): boolean => this.collection.length === 1;
 }
